@@ -2981,6 +2981,7 @@ export default function OuestBourse() {
                           <span>H: {fmt(s.high)}</span>
                           <span>B: {fmt(s.low)}</span>
                         </div>
+                      </div>
                     );
                   })}
                 </div>
