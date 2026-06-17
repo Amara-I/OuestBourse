@@ -22,6 +22,48 @@ const C = {
 
 const LOGO_URL = "/ouestbourse-logo.png"; // Place logo in public folder
 
+// ═══════════════════════════════════════
+// CONSTANTES GLOBALES
+// ═══════════════════════════════════════
+
+const globalCSS = `
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', sans-serif; background: #0a0a0f; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+  ::-webkit-scrollbar { width: 6px; } 
+  ::-webkit-scrollbar-track { background: #0d0d14; }
+  ::-webkit-scrollbar-thumb { background: #2a2a3e; border-radius: 3px; }
+`;
+
+const NAV_STYLE = {
+  background: "#0d0d14",
+  borderBottom: "1px solid #1e1e2e",
+  position: "sticky",
+  top: 0,
+  zIndex: 100,
+};
+
+// Composant Notification
+function Notification({ n }) {
+  if (!n) return null;
+  const isError = n.type === "error";
+  return (
+    <div style={{
+      position: "fixed", top: 20, right: 20, zIndex: 9999,
+      background: isError ? "#2a0a0a" : "#0a1a0a",
+      border: `1px solid ${isError ? "#ff4444" : "#00c853"}`,
+      borderRadius: 10, padding: "12px 20px",
+      color: isError ? "#ff4444" : "#00c853",
+      fontSize: 14, fontWeight: 600,
+      animation: "fadeIn 0.3s ease",
+      maxWidth: 320, boxShadow: "0 4px 20px rgba(0,0,0,0.5)"
+    }}>
+      {isError ? "⚠ " : "✓ "}{n.message}
+    </div>
+  );
+}
+
 // ══════════════════════════════════════════════════════════════
 // HISTORICAL DATA — Monthly 2010→2026 (BRVM / Sikafinance)
 // ══════════════════════════════════════════════════════════════
@@ -2369,7 +2411,7 @@ export default function OuestBourse() {
 
   // ── Generate stocks data ──
   const generateStocks = useCallback(() => {
-    const raw = COMPANIES_DATA.map(c => ({
+    const raw = COMPANIES_FULL.map(c => ({
       ...c,
       monthly: buildMonthly(c.yearlyPrices),
       prices: c.yearlyPrices,
@@ -2462,7 +2504,10 @@ export default function OuestBourse() {
     )
     .sort((a, b) => {
       let va = a[sortBy], vb = b[sortBy];
-      if (typeof va === "string") va = va.toLowerCase(), vb = vb.toLowerCase();
+      if (typeof va === "string") {
+        va = va.toLowerCase();
+        vb = vb.toLowerCase();
+      }
       return sortDir === "asc" ? (va > vb ? 1 : -1) : (va < vb ? 1 : -1);
     });
 
