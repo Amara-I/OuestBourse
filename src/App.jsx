@@ -521,7 +521,7 @@ const Ticker = ({ stocks, onSelect }) => {
 // ══════════════════════════════════════════════════════════════
 // MAIN APP
 // ══════════════════════════════════════════════════════════════
-export default function OuestBourse() {
+export default function OuestBourse1() {
   const [page, setPage] = useState("landing");
   const [user, setUser] = useState(null);
   const [stocks, setStocks] = useState([]);
