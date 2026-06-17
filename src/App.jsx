@@ -2978,7 +2978,6 @@ export default function OuestBourse() {
                           </AreaChart>
                         </ResponsiveContainer>
                         <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8, fontSize: 11, color: C.textDim }}>
-                          <span>
                           <span>H: {fmt(s.high)}</span>
                           <span>B: {fmt(s.low)}</span>
                         </div>
