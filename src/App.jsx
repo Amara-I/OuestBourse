@@ -521,6 +521,7 @@ const Ticker = ({ stocks, onSelect }) => {
 // ══════════════════════════════════════════════════════════════
 // HEADER
 // ══════════════════════════════════════════════════════════════
+
 function Header({ user, onLogout, onNav, stocks, onSelectStock }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const brvmIdx = BRVM_COMPOSITE.filter(d => d.price > 0).slice(-1)[0]?.price || 922;
