@@ -1538,7 +1538,7 @@ function StockDetail({ stock, user, notify, onBack }) {
 // ══════════════════════════════════════════════════════════════
 // STOCK PREVIEW (pré-login — vue partielle)
 // ══════════════════════════════════════════════════════════════
-function StockPreview({ stock, onNav }) {
+function StockPreview2({ stock, onNav }) {
   const preview = (stock.monthly || []).filter(d => d.price > 0).slice(-12);
   return (
     <div style={{ padding: "24px 20px", maxWidth: 800, margin: "0 auto", animation: "fadeIn 0.4s ease" }}>
@@ -2724,7 +2724,7 @@ export default function OuestBourse() {
           </div>
         </nav>
         {notification && <Notification n={notification} />}
-        <StockPreview stock={selectedStock} onNav={onNav} />
+        <StockPreview2 stock={selectedStock} onNav={onNav} />
       </div>
     );
   }
