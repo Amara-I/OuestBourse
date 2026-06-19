@@ -2411,8 +2411,8 @@ export default function OuestBourse() {
       users.push({
         email: "valdestsakem@yahoo.fr",
         password: "Admin2026!",
-        nom: "Sakem",
-        prenom: "Valdest",
+        nom: "Tsakem",
+        prenom: "Valdes",
         isAdmin: true,
         watchlist: [],
         alerts: [],
