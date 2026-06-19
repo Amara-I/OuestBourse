@@ -465,7 +465,7 @@ const generateHourlyIntraday = (basePrice) => {
 // ══════════════════════════════════════════════════════════════
 const generateDailyVariations = (companies) =>
   companies.map((c) => {
-    const lastYear = Object.keys(c.prices).filter(y => c.prices[y] > 0).pop();
+    const lastYear = Object.keys(c.prices || {}).filter(y => c.prices[y] > 0).pop();
     const basePrice = c.prices[lastYear];
     const variation = (Math.random() - 0.48) * 6;
     const currentPrice = basePrice * (1 + variation / 100);
@@ -1979,7 +1979,7 @@ function AnalysisView({ stocks, onSelectStock }) {
   const stockB = stocks.find(s => s.ticker === compareB);
 
   const commonYears = stockA && stockB
-    ? Object.keys(stockA.prices).filter(y => stockA.prices[y] > 0 && stockB?.prices?.[y] > 0)
+    ? Object.keys(stockA.prices || {}).filter(y => stockA.prices[y] > 0 && stockB?.prices?.[y] > 0)
     : [];
 
   const compareData = commonYears.map(y => ({
