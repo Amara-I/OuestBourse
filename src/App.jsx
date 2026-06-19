@@ -580,7 +580,7 @@ function Header({ user, onLogout, onNav, stocks, onSelectStock }) {
         <img src="/ouestbourse-logo.png" alt="OuestBourse" style={{ height: 36, objectFit: "contain" }}
           onError={e => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }} />
         <div style={{ display: "none", alignItems: "center", gap: 8 }}>
-          <div style={{ width: 32, height: 32, borderRadius: "50%", background: `linear-gradient(135deg, ${C.brvmGreen}, ${C.gold})`, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 14, color: "#fff" }}>OB</div>
+          <div style={{ width: 32, height: 32, borderRadius: "50%", background: `linear-gradient(135deg, ${C.brvmGreen}, ${C.gold})`, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 14, color: "#fff" }}>logo.jpeg/div>
           <div>
             <div style={{ fontWeight: 800, fontSize: 15, color: C.gold }}>OuestBourse</div>
             <div style={{ fontSize: 9, color: C.silver }}>West Africa's Stock Market</div>
@@ -2556,7 +2556,7 @@ export default function OuestBourse() {
         {/* NAVBAR */}
         <nav style={{ position: "sticky", top: 0, zIndex: 100, background: `${C.panel}EE`, backdropFilter: "blur(12px)", borderBottom: `1px solid ${C.border}`, padding: "12px 32px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <div style={{ width: 36, height: 36, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 16, color: "#fff" }}>OB</div>
+            <div style={{ width: 36, height: 36, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 16, color: "#fff" }}>logo.jpeg/div>
             <div>
               <div style={{ fontWeight: 800, fontSize: 16, letterSpacing: 1 }}>OuestBourse</div>
               <div style={{ fontSize: 10, color: C.silver, letterSpacing: 2 }}>PLATEFORME BRVM</div>
@@ -2706,7 +2706,7 @@ export default function OuestBourse() {
         {notification && <Notification n={notification} />}
         <div style={{ ...S.card, width: "100%", maxWidth: 420, padding: 36 }}>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
-            <div style={{ width: 52, height: 52, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 22, color: "#fff", margin: "0 auto 12px" }}>OB</div>
+            <div style={{ width: 52, height: 52, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 22, color: "#fff", margin: "0 auto 12px" }}>logo.jpeg/div>
             <div style={{ fontSize: 22, fontWeight: 800 }}>Connexion</div>
             <div style={{ color: C.silver, fontSize: 13, marginTop: 4 }}>Accédez à votre compte OuestBourse</div>
           </div>
@@ -2744,7 +2744,7 @@ export default function OuestBourse() {
         {notification && <Notification n={notification} />}
         <div style={{ ...S.card, width: "100%", maxWidth: 440, padding: 36 }}>
           <div style={{ textAlign: "center", marginBottom: 28 }}>
-            <div style={{ width: 52, height: 52, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 22, color: "#fff", margin: "0 auto 12px" }}>OB</div>
+            <div style={{ width: 52, height: 52, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 22, color: "#fff", margin: "0 auto 12px" }}>logo.jpeg/div>
             <div style={{ fontSize: 22, fontWeight: 800 }}>Créer un compte</div>
             <div style={{ color: C.silver, fontSize: 13, marginTop: 4 }}>Rejoignez la communauté OuestBourse</div>
           </div>
@@ -2813,7 +2813,7 @@ export default function OuestBourse() {
           {/* Main nav bar */}
           <div style={{ padding: "10px 24px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 10 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-              <div style={{ width: 34, height: 34, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 14, color: "#fff" }}>OB</div>
+              <div style={{ width: 34, height: 34, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 14, color: "#fff" }}>logo.jpeg/div>
               <div style={{ fontWeight: 800, fontSize: 15, letterSpacing: 0.5 }}>OuestBourse</div>
               <span style={{ fontSize: 10, color: C.textDim, letterSpacing: 1 }}>BRVM</span>
             </div>
@@ -3011,7 +3011,7 @@ export default function OuestBourse() {
       {/* NAV */}
       <nav style={NAV_STYLE}>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <div style={{ width: 40, height: 40, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 18, color: "#fff" }}>OB</div>
+          <div style={{ width: 40, height: 40, background: `linear-gradient(135deg, ${C.gold}, ${C.brvmGreen})`, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 900, fontSize: 18, color: "#fff" }}>logo.jpeg/div>
           <div style={{ fontWeight: 800, fontSize: 18, letterSpacing: 0.5 }}>OuestBourse</div>
         </div>
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
