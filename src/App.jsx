@@ -74,7 +74,7 @@ const buildMonthly = (yearMap) => {
   //Object.entries(yearMap).forEach(([year, months]) => {
   Object.entries(yearMap || {}).forEach(([year, months]) => {
 
-    months.forEach((price, mi) => {
+    (months || []).forEach((price, mi) => {
       if (price > 0) result.push({
         date: `${year}-${String(mi + 1).padStart(2, "0")}`,
         year: parseInt(year), month: mi + 1, price
