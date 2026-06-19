@@ -71,7 +71,9 @@ function Notification({ n }) {
 // Monthly prices helper: [Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec]
 const buildMonthly = (yearMap) => {
   const result = [];
-  Object.entries(yearMap).forEach(([year, months]) => {
+  //Object.entries(yearMap).forEach(([year, months]) => {
+  Object.entries(yearMap || {}).forEach(([year, months]) => {
+
     months.forEach((price, mi) => {
       if (price > 0) result.push({
         date: `${year}-${String(mi + 1).padStart(2, "0")}`,
@@ -1198,7 +1200,9 @@ function StockDetail({ stock, user, notify, onBack }) {
     notify(inWatchlist ? `${stock.ticker} retiré de la Watchlist` : `${stock.ticker} ajouté à la Watchlist`, "success");
   };
 
-  const annualData = Object.entries(stock.prices)
+  //const annualData = Object.entries(stock.prices) 
+  const annualData = Object.entries(stock.prices || {})
+
     .filter(([, v]) => v > 0)
     .map(([year, price]) => ({ year, price, dividend: stock.dividends?.[year] || 0 }));
 
