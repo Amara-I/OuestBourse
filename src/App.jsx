@@ -2424,13 +2424,17 @@ export default function OuestBourse() {
   }, []);
 
   // ── Generate stocks data ──
+ // const generateStocks = useCallback(() => {
+  //  const raw = COMPANIES_FULL.map(c => ({
+  //    ...c,
+  //    monthly: buildMonthly(c.yearlyPrices),
+  //    prices: c.yearlyPrices,
+ //   }));
+  //  return generateDailyVariations(raw);
+ // }, []);
+
   const generateStocks = useCallback(() => {
-    const raw = COMPANIES_FULL.map(c => ({
-      ...c,
-      monthly: buildMonthly(c.yearlyPrices),
-      prices: c.yearlyPrices,
-    }));
-    return generateDailyVariations(raw);
+    return generateDailyVariations(COMPANIES_FULL);
   }, []);
 
   // ── Load stocks ──
